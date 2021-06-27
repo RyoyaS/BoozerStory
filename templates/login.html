@@ -1,0 +1,27 @@
+{%extends 'base.html'%}
+
+{%load static%}
+
+{%block customcss%}
+{%endblock customcss%}
+
+{%block content%}
+
+<form method="POST">{% csrf_token %}
+    <h1>会員情報を入力してください</h1>
+    {{error}}
+    <div>
+        <input type="text" placeholder="UserName" name="username">
+        <label>ユーザー名</label>
+    </div>
+    <div>
+        <input type="password" placeholder="Password" name="password">
+        <label>パスワード</label>
+    </div>
+    <button type="submit">ログイン</button>
+    <p>or</p>
+
+</form>
+<a href="{%url 'signup'%}"><button>会員登録ページへ</button></a>
+
+{%endblock content%}

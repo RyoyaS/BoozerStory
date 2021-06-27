@@ -1,0 +1,42 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>物語酒場</title>
+    <link href="{%static 'nav.css'%}" rel="stylesheet">
+    <link href="{%static 'sanitize.css'%}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap" rel="stylesheet">
+    {%block head %}{%endblock head%}
+</head>
+
+
+<body>
+    <header>
+        <a href="{%url 'index'%}" class="logo">物語酒場</a>
+        <nav>
+            <ul>
+                {%if user.is_authenticated%}
+                <li class="nav_button"><a href="{%url 'logout'%}">ログアウト</a></li>
+                <li class="nav_button">ようこそ{{user.username}}さん</li>
+                {%else%}
+                <li class="nav_button"><a href="{%url 'login'%}">ログイン</a></li>
+                <li class="nav_button">ようこそゲストさん</li>
+                {%endif%}
+            </ul>
+        </nav>
+    </header>
+
+
+    {%block content%}
+
+    {%endblock content%}
+</body>
+
+</html>

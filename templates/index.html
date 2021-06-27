@@ -1,0 +1,19 @@
+{%extends 'base.html'%}
+
+{%load static%}
+
+{%block customcss%}
+{%endblock customcss%}
+
+{%block content%}
+<h1>ようこそ物語酒場へ</h1>
+<h2>物語酒場とは</h2>
+<p>物語酒場にはありとあらゆる人々のお酒にまつわる話が集まってきます。<br>
+    それぞれの話ごとにおすすめのお酒を添えておりますので、ぜひお楽しみください。<br>
+    また酒場の出会いは一期一会となっておりますので、どんな物語に出会えるかは運次第となっております。<br>
+    あなたの物語も誰かの酒の肴になっているかもしれません。
+</p>
+
+<a href="{%url 'read' random_pk%}"><button>誰かの物語を聞く</button></a>
+<a href="{%url 'create'%}"><button>自分の物語を話す</button></a>
+{%endblock content%}

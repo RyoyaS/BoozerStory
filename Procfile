@@ -1,1 +1,1 @@
-web: gunicorn NewProject.wsgi --log-file -
+web: gunicorn boozerstory.wsgi --log-file -

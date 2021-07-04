@@ -1,1 +1,1 @@
-web: gunicorn monogatari-sakaba.wsgi --log-file -
+web: gunicorn NewProject.wsgi --log-file -

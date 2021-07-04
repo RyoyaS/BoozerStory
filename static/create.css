@@ -1,0 +1,52 @@
+.content{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.content .p{
+    text-align: left;
+}
+.title{
+    width: 50%;   
+}
+
+.recommend_drink{
+    width: 50%;
+}
+
+.story_content{
+    width: 100%;
+    height: 400px;
+}
+
+.submit_btn{
+    border-radius: 8px;
+    border: double;
+    border-color: #fff;
+    background-color: black;
+    color: #fff;
+    font-size: 15px;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+.guest_content{
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 8px;
+    border: double;
+    border-color: #fff;
+    background-color: black;
+    color: #fff;
+    font-size: 25px;
+    font-family: 'DotGothic16', sans-serif;
+    padding: 5px;
+    padding-bottom: 30px;
+}
+
+.a_btn{
+    color: #fff;
+}
+
+.a_btn:hover{
+    background-color: rgb(92, 92, 92);
+}

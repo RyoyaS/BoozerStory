@@ -1,0 +1,1 @@
+web: gunicorn BoozeStory.wsgi --log-file -

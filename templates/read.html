@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block head%}
+{%block customcss%}
+<link href="{%static 'read.css'%}" rel="stylesheet">
+{%endblock customcss%}
+{%endblock head%}
+
+{%block content%}
+<div class="content">
+    <p class="story_title">タイトル：{{story_object.title}}</p>
+    <p class="story_recommend_drink">この物語におすすめのお酒：{{story_object.recommend_drink}}</p>
+    <p class="story_content">{{story_object.content|linebreaksbr }}</p>
+
+
+    <form method="POST" name="comment_form" 　onSubmit="return input_check()">{% csrf_token %}
+        コメントを残す
+        <textarea name="comment" class="input_comment" placeholder="Leave a message..."></textarea>
+        <input type="hidden" name="story_id" value="{{story_object.id}}">
+        <input type="submit" class="submit_btn" value="コメントを送信">
+    </form>
+    <p>コメント</p>
+    <ul>
+        {%for comment in comment_objects%}
+        <li>{{comment.comment}}</li>
+        {%endfor%}
+    </ul>
+</div>
+{%endblock content%}

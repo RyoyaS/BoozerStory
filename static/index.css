@@ -1,0 +1,18 @@
+.content{
+    text-align: center;
+}
+
+.story_button{
+    border-radius: 8px;
+    border: double;
+    border-color: #fff;
+    background-color: black;
+    color: #fff;
+    font-size: 25px;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+.story_button:hover{
+    background-color: rgb(92, 92, 92);
+}
+

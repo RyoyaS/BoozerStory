@@ -1,0 +1,30 @@
+{%extends 'base.html' %}
+
+{% load widget_tweaks %}
+{%load static%}
+
+{%block head%}
+{%block customcss%}
+<link href="{%static 'create.css'%}" rel="stylesheet">
+{%endblock customcss%}
+{%endblock head%}
+
+{%block content%}
+{%if user.is_authenticated%}
+<div class="content">
+    <form method="POST">{% csrf_token %}
+        <p>タイトル<br>{{form.title|add_class:"title"}}</p>
+        <p>物語におすすめのお酒<br>{{form.recommend_drink|add_class:"recommend_drink"}}</p>
+        <p>本文<br>{{form.content|add_class:"story_content"}}</p>
+        <p><input type="hidden" name="author_id" value="{{user.id}}"></p>
+        <input type="submit" value="投稿" class="submit_btn">
+    </form>
+</div>
+{%else%}
+<div class="guest_content">
+    <p>ログインまたは会員登録してください</p>
+    <a class="a_btn" href="{%url 'login'%}">▶ログイン</a><br>
+    <a class="a_btn" href="{%url 'signup'%}">▶会員登録</a>
+</div>
+{%endif%}
+{%endblock content%}

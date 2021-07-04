@@ -1,0 +1,28 @@
+{%extends 'base.html'%}
+
+{%load static%}
+{%block head%}
+{%block customcss%}
+<link href="{%static 'user_info_form.css'%}" rel="stylesheet">
+{%endblock customcss%}
+{%endblock head%}
+
+{%block content%}
+<div class="content">
+    <form method="POST">{% csrf_token %}
+        <h1>会員情報を入力してください</h1>
+        {{error}}
+        <div>
+            <label>ユーザー名</label>
+            <input type="text" placeholder="UserName" name="username" class="input_content">
+        </div>
+        <div>
+            <label>パスワード</label>
+            <input type="password" placeholder="Password" name="password" class="input_content">
+        </div>
+        <input type="submit" class="login_btn" value="▶ログイン">
+    </form>
+
+    <a href="{%url 'signup'%}" class="a_signup">▶会員登録ページへ</a>
+</div>
+{%endblock content%}

@@ -1,0 +1,76 @@
+.content{
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 8px;
+    border: double;
+    border-color: #fff;
+    background-color: black;
+    color: #fff;
+    font-size: 25px;
+    font-family: 'DotGothic16', sans-serif;
+    padding: 5px;
+    padding-bottom: 30px;
+}
+
+.login_btn{
+    border: none;
+    margin: 10px;
+    font-size: 25px;
+    color: #fff;
+    background-color: black;
+    text-decoration: none;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+.login_btn:hover{
+    background-color: rgb(92, 92, 92);
+}
+
+.a_signup{
+    border: none;
+    margin: 10px;
+    font-size: 25px;
+    color: #fff;
+    background-color: black;
+    text-decoration: none;
+}
+
+.a_signup:hover{
+    margin-top: 10px;
+    background-color: rgb(92, 92, 92);
+}
+
+.input_content{
+    border: none;
+    border-bottom: dotted #fff;
+    background-color: black;
+    color: #fff;
+}
+
+.sginup_btn{
+    border: none;
+    margin: 10px;
+    font-size: 25px;
+    color: #fff;
+    background-color: black;
+    text-decoration: none;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+.sginup_btn:hover{
+    background-color: rgb(92, 92, 92);
+}
+
+.a_login{
+    border: none;
+    margin: 10px;
+    font-size: 25px;
+    color: #fff;
+    background-color: black;
+    text-decoration: none;
+}
+
+.a_login:hover{
+    margin-top: 10px;
+    background-color: rgb(92, 92, 92);
+}

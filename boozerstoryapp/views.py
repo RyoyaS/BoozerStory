@@ -45,10 +45,10 @@ def logoutfunc(request):
 
 def indexfunc(request):
     storymodel_count = StoryModel.objects.all().count()
-    if storymodel_count is not None:
+    try:
         random_pk = random.randint(2, storymodel_count)
         return render(request, "index.html", {"random_pk": random_pk})
-    else:
+    except ValueError:
         return render(request, "index.html", {"random_pk": 1})
 
 

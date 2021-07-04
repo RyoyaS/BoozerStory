@@ -46,7 +46,10 @@ def logoutfunc(request):
 def indexfunc(request):
     storymodel_count = StoryModel.objects.all().count()
     random_pk = random.randint(1, storymodel_count)
-    return render(request, "index.html", {"random_pk": random_pk})
+    if random_pk is not None:
+        return render(request, "index.html", {"random_pk": random_pk})
+    else:
+        return render(request, "index.html", {"random_pk": 1})
 
 
 def readfunc(request, pk):

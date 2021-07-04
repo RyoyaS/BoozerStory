@@ -1,1 +1,1 @@
-web: gunicorn BoozeStory.wsgi --log-file -
+web: gunicorn monogatari-sakana.wsgi --log-file -

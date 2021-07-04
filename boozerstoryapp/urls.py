@@ -6,7 +6,7 @@ urlpatterns = [
     path('signup/', signupfunc, name="signup"),
     path('login/', loginfunc, name="login"),
     path('logout/', logoutfunc, name="logout"),
-    path('index/', indexfunc, name="index"),
+    path('/', indexfunc, name="index"),
     path('read/<int:pk>', readfunc, name="read"),
     path("create/", StoryCreate.as_view(), name="create"),
 ]
